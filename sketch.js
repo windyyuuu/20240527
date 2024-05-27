@@ -80,6 +80,12 @@ function drawSkeleton() {
       line(partA.x, partA.y, partB.x, partB.y);
       
     }
+    //eyes
+    partA = pose.keypoints[1];
+    partB = pose.keypoints[2];
+    if (partA.score > 0.1  ){
+      ellipse(partA.x,partA.y,50)
+    }
     // shoulders to hips
     partA = pose.keypoints[5];
     partB = pose.keypoints[11];
